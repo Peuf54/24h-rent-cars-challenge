@@ -6,6 +6,10 @@
 
     .show-car-card-details {
 
+        * {
+            width: 100%;
+        }
+
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -16,7 +20,7 @@
     .show-car-card-infos {
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        text-align: right;  
     }
 
     form {
