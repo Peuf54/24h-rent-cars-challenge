@@ -1,39 +1,24 @@
 @import 'variables';
 
-.home-container {
-
+.index-cars-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 25px;
-    .home-main-card {
-        div {
-            display: flex;
-            gap: 10px;
 
-            img {
-                height: 100%;
-                object-fit: cover;
-            }
-        }
-    }
-
-    .home-discover-or-rent-cta-conainer {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    .home-our-latest-container {
+    .index-cars-cards-container {
         width: 100%;
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 35px;
 
         .car-card {
 
             display: flex;
             flex-direction: column;
             gap: 10px;
+
             .car-card-details {
                 width: 100%;
                 display: flex;

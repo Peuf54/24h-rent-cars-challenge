@@ -1,2 +1,35 @@
-<h1>Pages#home</h1>
-<p>Find me in appx/views/pages/home.html.erb</p>
+<div class="home-container">
+    <div class="back-plate home-main-card">
+        <h2 class="m-bold-title">How we do ?</h2>
+        <div>
+            <p>Take My Car is an innovative peer-to-peer car rental platform. It bridges the gap between car owners keen on monetizing their idle vehicles and drivers seeking a convenient and cost-effective rental solution. Born amid the digital revolution of the 21st century, Take My Car is a testament to the power of maximizing available resources. It is driven by a mission rooted in collaborative and responsible consumption. The booking process is straightforward and transparent, making for a pleasant and reassuring user experience. Take My Car has become a major player in the industry, reshaping the car rental landscape while providing a convenient avenue for generating extra income</p>
+            <img src="https://images.unsplash.com/photo-1490985830292-06e0fe60d725?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1132&q=80" alt="An illustration of car" width="426">
+        </div>
+    </div>
+
+    <div class="home-discover-or-rent-cta-conainer">
+        <%= link_to 'Discover all cars', cars_path, class: "main-cta fsize3" %>
+        <p class="m-bold-title">Or</p>
+        <%= link_to 'Rent your own', new_car_path, class: "secondary-cta fsize3" %>
+    </div>
+
+    <hr>
+
+    <h2 class="m-bold-title">Our latest</h2>
+
+    <div class="home-our-latest-container">
+        <% @cars.each do |car| %>
+            <div class="car-card back-plate">
+                <h3 class="s-bold-title"><%= car.model %></h3>
+                <div class="car-card-details">
+                    <p><%= car.brand %></p>
+                    <p><%= car.year_of_production %></p>
+                    <p><b>$<%= car.price_per_day %></b> /day</p>
+                </div>
+                <%# <%= cl_image_tag car.photo.key %>
+                <%= image_tag "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=245&q=80"%>
+                <%= link_to 'See this car', car_path(car), class: 'secondary-cta m-title' %>
+            </div>
+        <% end %>
+    </div>
+</div>

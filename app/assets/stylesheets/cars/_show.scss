@@ -1,0 +1,28 @@
+@import 'variables';
+
+.show-car-card {
+    display: flex;
+    gap: 15px;
+
+    .show-car-card-details {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex: 1;
+    }
+
+    .show-car-card-infos {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    form {
+
+        * {
+            width: 100%;
+        }
+    }
+}
