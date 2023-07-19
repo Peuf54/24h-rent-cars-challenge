@@ -21,8 +21,10 @@ class CarsController < ApplicationController
     private
 
     def getUnavailableDates(car)
+        # Statement of the empty array where unavailables dates for a car will be placed
         dates = []
         car.bookings.each do |booking|
+            # Pushing unavailables dates during the iteration into every bookings of a car
             dates << { from: booking.starts_at, to: booking.ends_at }
         end
         dates
