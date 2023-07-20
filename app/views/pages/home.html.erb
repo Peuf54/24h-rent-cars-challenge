@@ -26,8 +26,7 @@
                     <p><%= car.year_of_production %></p>
                     <p><b>$<%= car.price_per_day %></b> /day</p>
                 </div>
-                <%# <%= cl_image_tag car.photo.key %>
-                <%= cl_image_tag car.photo.key, width: 245 %>
+                <%= cl_image_tag car.photo.key, width: 245, height: 163 %>
                 <%= link_to 'See this car', car_path(car), class: 'secondary-cta m-title' %>
             </div>
         <% end %>

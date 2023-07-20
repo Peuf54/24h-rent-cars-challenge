@@ -14,7 +14,7 @@
                 <p class="fsize4"><%= "From #{booking[:details].starts_at.strftime("%A %e %B %Y %H:%M")}" %></p>
                 <p class="fsize4"><%= "To #{booking[:details].ends_at.strftime("%A %e %B %Y %H:%M")}" %></p>
                 <%# <%= cl_image_tag car.photo.key %>
-                <%= cl_image_tag booking[:details].car.photo.key, width: 245 %>
+                <%= cl_image_tag booking[:details].car.photo.key, width: 245, height: 163 %>
                 <%= link_to 'Accept', accept_booking_path(booking[:details]), class: 'accept-cta s-bold-title', data: { turbo_method: :patch } %>
             </div>
         <% end %>
@@ -34,7 +34,7 @@
                 <p class="fsize4"><%= "From #{booking[:details].starts_at.strftime("%A %e %B %Y %H:%M")}" %></p>
                 <p class="fsize4"><%= "To #{booking[:details].ends_at.strftime("%A %e %B %Y %H:%M")}" %></p>
                 <%# <%= cl_image_tag car.photo.key %>
-                <%= cl_image_tag booking[:details].car.photo.key, width: 245 %>
+                <%= cl_image_tag booking[:details].car.photo.key, width: 245, height: 163 %>
                 <p class=<%= booking[:status][:class] %>><%= booking[:status][:message] %></p>
             </div>
         <% end %>
