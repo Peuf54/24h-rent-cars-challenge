@@ -26,7 +26,11 @@
                     <p><%= car.year_of_production %></p>
                     <p><b>$<%= car.price_per_day %></b> /day</p>
                 </div>
-                <%= cl_image_tag car.photo.key, width: 245, height: 163 %>
+                <% if car.photo.key %>
+                  <%= cl_image_tag car.photo.key, width: 245, height: 163 %>
+                <% else %>
+                    <img src="https://images.unsplash.com/photo-1490985830292-06e0fe60d725?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=245&q=80" alt="">
+                <% end %>
                 <%= link_to 'See this car', car_path(car), class: 'secondary-cta m-title' %>
             </div>
         <% end %>

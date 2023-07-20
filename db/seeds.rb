@@ -65,9 +65,10 @@ i = 0
 15.times do
     car = Car.new({brand: Faker::Vehicle.make, model: Faker::Vehicle.model, year_of_production: Faker::Vehicle.year, address: ADDRESSES.sample, price_per_day: rand(50..350)})
     car.user = User.all.reject { |user| user.cars.count > 5 }.sample
-
-    file = URI.open(IMAGES_URL.shuffle.pop)
-    car.photo.attach(io: file, filename: "#{i}.png", content_type: "image/png")
+    if ENV["CLOUDINARY_URL"]
+        file = URI.open(IMAGES_URL.shuffle.pop)
+        car.photo.attach(io: file, filename: "#{i}.png", content_type: "image/png")
+    end
 
     car.save!
 end
