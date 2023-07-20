@@ -1,32 +1,39 @@
 @import 'variables';
 
-.show-car-card {
-    display: flex;
-    gap: 15px;
+.show-car-container {
 
-    .show-car-card-details {
-
+    .secondary-cta {
+        margin-top: 25px;
+        width: 150px;
+    }
+    .show-car-card {
+        display: flex;
+        gap: 15px;
+        
+        .show-car-card-details {
+            
         * {
             width: 100%;
         }
-
+        
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-end;
         flex: 1;
     }
-
+    
     .show-car-card-infos {
         display: flex;
         flex-direction: column;
         text-align: right;  
     }
-
+    
     form {
-
+        
         * {
             width: 100%;
         }
     }
+}
 }

@@ -12,6 +12,14 @@ class BookingsController < ApplicationController
         end
     end
 
+    def index
+        @my_bookings = Booking.where(user_id: current_user.id)
+        @my_cars_bookings = []
+        current_user.cars.each do |car|
+            car.bookings.each { |booking| @my_cars_bookings << booking }
+        end
+    end
+
     private
 
     def booking_params

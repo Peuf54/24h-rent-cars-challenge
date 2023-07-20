@@ -1,0 +1,23 @@
+@import 'variables';
+
+.register-page-container {
+    width: 400px;
+    margin: auto;
+    form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    a {
+        color: $primary-color;
+        text-decoration: none;
+
+
+        &:hover {
+            color: $primary-color;
+            text-decoration: underline;
+        }
+    }
+}

@@ -15,7 +15,14 @@ class CarsController < ApplicationController
     end
 
     def create
-        
+        car = Car.new(car_params)
+        car.user = current_user
+        if car.save
+            redirect_to car_path(car), notice: 'Car successfully added !'
+        else
+            @car = Car.new
+            redirect_to new_car_path, alert: 'An error has occured.'
+        end
     end
 
     private
@@ -28,5 +35,9 @@ class CarsController < ApplicationController
             dates << { from: booking.starts_at, to: booking.ends_at }
         end
         dates
+    end
+
+    def car_params
+        params.require(:car).permit(:brand, :model, :year_of_production, :price_per_day, :address)
     end
 end
