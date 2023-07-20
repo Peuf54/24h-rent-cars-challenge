@@ -1,6 +1,6 @@
 class CarsController < ApplicationController
     def index
-        @cars = Car.all    
+        @cars = Car.all.reject { |car| car.user == current_user }
     end
 
     def show
