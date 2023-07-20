@@ -6,4 +6,5 @@ Rails.application.routes.draw do
     resources :bookings, only: %w[create]
   end
   resources :bookings, only: %w[index]
+  patch '/booking/:id/accept', to: 'bookings#acceptBooking', as: :accept_booking
 end

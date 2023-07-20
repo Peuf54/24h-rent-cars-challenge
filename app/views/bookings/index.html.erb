@@ -1,20 +1,44 @@
 <div class="index-bookings-container">
+
+    <%# MY CARS BOOKINGS SECTION %>
+    <h2 class="m-bold-title">My Cars Bookings</h2>
+    <div class="bookings-cards-container">
+        <% @my_cars_bookings.each do |booking| %>
+            <div class="booking-card back-plate">
+                <h3 class="s-bold-title"><%= booking[:details].car.model %></h3>
+                <div class="car-card-details">
+                    <p><%= booking[:details].car.brand %></p>
+                    <p><%= booking[:details].car.year_of_production %></p>
+                    <p><b>$<%= booking[:total_price] %></b></p>
+                </div>
+                <p class="fsize4"><%= "From #{booking[:details].starts_at.strftime("%A %e %B %Y %H:%M")}" %></p>
+                <p class="fsize4"><%= "To #{booking[:details].ends_at.strftime("%A %e %B %Y %H:%M")}" %></p>
+                <%# <%= cl_image_tag car.photo.key %>
+                <%= image_tag "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=245&q=80"%>
+                <%= link_to 'Accept', accept_booking_path(booking[:details]), class: 'accept-cta s-bold-title', data: { turbo_method: :patch } %>
+            </div>
+        <% end %>
+    </div>
+
+    <%# MY BOOKINGS SECTION %>
     <h2 class="m-bold-title">My Bookings</h2>
     <div class="bookings-cards-container">
         <% @my_bookings.each do |booking| %>
             <div class="booking-card back-plate">
-                <h3 class="s-bold-title"><%= booking.car.model %></h3>
+                <h3 class="s-bold-title"><%= booking[:details].car.model %></h3>
                 <div class="car-card-details">
-                    <p><%= booking.car.brand %></p>
-                    <p><%= booking.car.year_of_production %></p>
-                    <p><b>$<%= booking.car.price_per_day %></b> /day</p>
+                    <p><%= booking[:details].car.brand %></p>
+                    <p><%= booking[:details].car.year_of_production %></p>
+                    <p><b>$<%= booking[:total_price] %></b></p>
                 </div>
-                <p class="fsize4"><%= "From #{booking.starts_at}" %></p>
-                <p class="fsize4"><%= "To #{booking.ends_at}" %></p>
+                <p class="fsize4"><%= "From #{booking[:details].starts_at.strftime("%A %e %B %Y %H:%M")}" %></p>
+                <p class="fsize4"><%= "To #{booking[:details].ends_at.strftime("%A %e %B %Y %H:%M")}" %></p>
                 <%# <%= cl_image_tag car.photo.key %>
                 <%= image_tag "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=245&q=80"%>
-                <%= link_to 'See this car', car_path(booking.car), class: 'secondary-cta m-title' %>
+                <p class=<%= booking[:status][:class] %>><%= booking[:status][:message] %></p>
             </div>
         <% end %>
     </div>
+
+    
 </div>
