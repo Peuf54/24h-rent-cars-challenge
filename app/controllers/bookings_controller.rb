@@ -23,6 +23,7 @@ class BookingsController < ApplicationController
     end
 
     def acceptBooking
+        # Set true to 'accepted' column.
         booking = Booking.find(params[:id])
         booking.accepted = true
         if booking.save
