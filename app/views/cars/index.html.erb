@@ -10,7 +10,7 @@
                     <p><b>$<%= car.price_per_day %></b> /day</p>
                 </div>
                 <%# <%= cl_image_tag car.photo.key %>
-                <%= image_tag "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80"%>
+                <%= cl_image_tag car.photo.key, width: 245 %>
                 <%= link_to 'See this car', car_path(car), class: 'secondary-cta m-title' %>
             </div>
         <% end %>
