@@ -4,7 +4,7 @@ Bienvenue sur mon repo GitHub pour le challenge Rails Rent Cars ! Dans le cadre 
 
 Le défi consistait à créer une plateforme pour faciliter la location de voitures entre particuliers. L'objectif principal était de créer une application où les utilisateurs peuvent voir une liste de voitures, accéder à des informations détaillées sur chaque voiture et faire des réservations.
 
-Ma solution à ce défi peut être trouvée à ce lien : [24h Rent Cars Challenge](https://24h-rent-cars-challenge.hugoptm.fr/). 
+Ma solution à ce défi peut être trouvée à ce lien : <a href="https://24h-rent-cars-challenge.hugoptm.fr/" target="_blank">24h Rent Cars Challenge</a>.
 
 Pour tester, vous pouvez utiliser les identifiants suivants :
 
