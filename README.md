@@ -1,3 +1,32 @@
+# 🚗 Rails Rent Cars Challenge Solution par Hugo 💎
+
+Bienvenue sur mon repo GitHub pour le challenge Rails Rent Cars ! Dans le cadre d'une certification, j'ai développé ce projet en 24 heures, en utilisant Ruby on Rails. 💎💎
+
+Le défi consistait à créer une plateforme pour faciliter la location de voitures entre particuliers. L'objectif principal était de créer une application où les utilisateurs peuvent voir une liste de voitures, accéder à des informations détaillées sur chaque voiture et faire des réservations.
+
+Ma solution à ce défi peut être trouvée à ce lien : <a href="https://24h-rent-cars-challenge.hugoptm.fr/" target="_blank">24h Rent Cars Challenge</a>.
+
+Pour tester, vous pouvez utiliser les identifiants suivants :
+
+- Email : test@test.com, test2@test.com, test3@test.com, test4@test.com, test5@test.com
+- Mot de passe : password
+
+Cette application a été conçue en tenant compte de l'utilisateur final, il était donc primordial de fournir une interface utilisateur propre et une expérience utilisateur intuitive. L'application a été construite sur un schéma de base de données robuste comme décrit dans les directives du projet, garantissant l'intégrité des données et le bon fonctionnement de l'application.
+
+Vous pouvez consulter le code pour l'implémentation complète !
+
+**Construit avec 💎🔨 :**
+
+- Ruby 3.1.2
+- Rails 7.0.4.3
+- Devise pour l'authentification
+- Flatpickr pour une UX High Level
+- Cloudinary pour la gestion des images
+
+J'espère que vous apprécierez de parcourir ce projet autant que j'ai apprécié de le construire ! 💎👨‍💻
+
+...
+
 # Rails Rent Cars
 
 Dans cet exercice, vous devez implémenter des fonctionnalités dans une application web `rails` à partir du cahier des charges spécifié ci-dessous et correspondant à votre sujet :
